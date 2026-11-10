@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Slot Timetable</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #e8f5e9;
+            text-align: center;
+        }
+
+        h1 {
+            color: green;
+        }
+
+        table {
+            margin: auto;
+            width: 80%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th {
+            background-color: green;
+            color: white;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 12px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>College Slot Timetable</h1>
+
+    <h3>Monday - Saturday</h3>
+
+    <h3>College Time: 8:00 AM - 2:43 PM</h3>
+
+    <table>
+
+        <tr>
+            <th>Day</th>
+            <th>Subject</th>
+        </tr>
+
+        {% for item in timetable %}
+
+        <tr>
+            <td>{{ item.day }}</td>
+            <td>{{ item.subject }}</td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</body>
+</html>
